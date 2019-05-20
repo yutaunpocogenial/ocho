@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @opinion.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @opinion.url %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @opinion.content %>
+</p>
+
+<hr>
+<tr>
+      <th>number/</th>
+      <th>name/</th>
+      <th>comment/</th>
+      <th>Time/</th>
+</tr>
+
+<br>
+
+<% @comments.each_with_index do |comment,index| %>
+      <tr>
+        <td><%= 1 + index %></td>
+        <td><%= comment.name %>/</td>
+        <td><%= comment.content %>/</td>
+        <td><%= comment.created_at %>/</td>
+      </tr>
+      <br>
+<% end %>
+
+<hr>
+ <%= render 'comments/form', comment: @comment %>
+<hr>
+
+<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+<%= link_to 'Back', opinions_path %>

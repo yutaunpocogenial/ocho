@@ -1,0 +1,27 @@
+
+<h1>Popular</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+  <hr>
+    <% @opinions.each do |opinion| %>
+      <tr>
+        <td><%= link_to opinion.title, opinion.url %></td>
+        <td><%= opinion.content %></td>
+        <td><%= opinion.created_at %></td>
+        <td><%= link_to 'Show', opinion %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
