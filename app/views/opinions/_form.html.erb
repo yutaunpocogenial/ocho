@@ -12,25 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :タイトル %>
     <%= form.text_field :title %>
   </div>
 
+
+　
   <div class="field">
-    <%= form.label :url %>
+  
+    <%= form.label :URL %>
+    ＊＊シェアする記事のURLはココに＊＊<br>
     <%= form.text_field :url %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :内容 %>
     <%= form.text_area :content %>
   </div>
 
 
   <% if user_signed_in? %>
+    <div class="bye"> 
     <div class="field">
     <%= form.label :user_id%>
     <%= form.text_area :user_id%>
+    </div>
     </div>
   <% else %>
   <% end %>
@@ -39,6 +45,6 @@
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "投稿"%>
   </div>
 <% end %>

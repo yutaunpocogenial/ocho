@@ -1,0 +1,31 @@
+
+
+
+
+
+<%= form_with(model: judge, local: true) do |form| %>
+
+<% if user_signed_in? %>
+ <%= form.label :"which" %>
+  <%= form.select :which, [["good", "good"], ["bad", "bad"]]  %>
+
+　<div class="bye">
+  <div class="field">
+    <%= form.label :opinion_id %>
+    <%= form.text_field :opinion_id %>
+  </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% else %>
+<h3>If you signed up, you can vote your opinion. </h3>
+<% end %>
+
+<% end %>
+
+<hr>
+
+

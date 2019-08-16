@@ -1,43 +1,48 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @opinion.title %>
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= @opinion.url %>
+  <strong>URL:</strong>
+  <%= link_to @opinion.url  %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>内容:</strong>
   <%= @opinion.content %>
 </p>
 
-<hr>
-<tr>
-      <th>number/</th>
-      <th>name/</th>
-      <th>comment/</th>
-      <th>Time/</th>
-</tr>
 
-<br>
+
+
+ <hr>
+
+
 
 <% @comments.each_with_index do |comment,index| %>
       <tr>
-        <td><%= 1 + index %></td>
-        <td><%= comment.name %>/</td>
-        <td><%= comment.content %>/</td>
-        <td><%= comment.created_at %>/</td>
+        <td><%= 1 + index %>.</td>
+
+        <td><%=  comment.name %></td> 
+        
+        
+        <br>
+        <td><%= comment.content %></td>
+  
+        <br>
+        <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M")  %></td>
+        
       </tr>
       <br>
+      <br>
 <% end %>
-
+<br>
 <hr>
  <%= render 'comments/form', comment: @comment %>
 <hr>
 
-<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
-<%= link_to 'Back', opinions_path %>
+
+<%= link_to '戻る', speed_path %>

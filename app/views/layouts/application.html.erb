@@ -7,40 +7,44 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width" >
   </head>
 
   <body>
 
   <div class="topnav" id="myTopnav">
-  <a href="/">Home</a>
-  <a href="/popular">Popular</a>
-  <a href="/speed">New</a>
+  <a href="/speed">Home</a>
   <a href="/about">About</a>
   <a href="/contact">Contact</a>
   <a href="/submit">Submit</a>
 
-  <a>
+  
   <% if user_signed_in? %>
     <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
   <% else %>
     <%= link_to 'Login/Signup', new_user_session_path, :method => :get %>
   <% end %>
-  </a>
 
 
-
-  <a>
   <% if user_signed_in? %>
     <%= link_to  current_user.username, '/mypage' %>
   <% else %>
-    Guest
+     <a>Guest</a>
   <% end %>
-  </a>
 
   </div>
 
-    <%= yield %>
+  <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
 
+<div class="wrapper">
+    <%= yield %>
+</div>
+
+<footer>
+ <h3>Ocho</h3>
+</footer>
 
   </body>
 </html>

@@ -25,16 +25,30 @@ class OpinionsController < ApplicationController
   # GET /opinions
   # GET /opinions.json
   def index
-    @user = User.all
 
-    @opinions = Opinion.all
+   @opinions = Opinion.all
+
+
   end
 
   # GET /opinions/1
   # GET /opinions/1.json
   def show
     @comment = @opinion.comments.build
+    
     @comments = Comment.where(opinion_id: @opinion)
+
+    @judge = @opinion.judges.build
+
+    @judges = Judge.where(opinion_id: @opinion)
+
+    @judgesall = Judge.where(opinion_id: @opinion).count
+    @judgesgood = Judge.where(opinion_id: @opinion).where(which: "good").count
+    @judgesbad = Judge.where(opinion_id: @opinion).where(which: "bad").count
+    
+    
+
+    @users = User.where()
   end
 
   # GET /opinions/new
@@ -71,7 +85,7 @@ class OpinionsController < ApplicationController
 
     respond_to do |format|
       if @opinion.save
-        format.html { redirect_to @opinion, notice: 'Opinion was successfully created.' }
+        format.html { redirect_to controller: 'opinions', action: 'speed' }
         format.json { render :show, status: :created, location: @opinion }
       else
         format.html { render :new }
@@ -85,7 +99,7 @@ class OpinionsController < ApplicationController
   def update
     respond_to do |format|
       if @opinion.update(opinion_params)
-        format.html { redirect_to @opinion, notice: 'Opinion was successfully updated.' }
+        format.html { redirect_to @opinion, notice: '投稿が削除されました。' }
         format.json { render :show, status: :ok, location: @opinion }
       else
         format.html { render :edit }
@@ -99,7 +113,7 @@ class OpinionsController < ApplicationController
   def destroy
     @opinion.destroy
     respond_to do |format|
-      format.html { redirect_to opinions_url, notice: 'Opinion was successfully destroyed.' }
+      format.html { redirect_to speed_path, notice: '投稿が削除されました。' }
       format.json { head :no_content }
     end
   end

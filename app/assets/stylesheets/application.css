@@ -13,9 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+ html,body{
+    margin:0px;
+    word-wrap: break-word;
+    width:100%;
+    
+  }
+
  .topnav {
     background-color: #333;
     overflow: hidden;
+    color: #f2f2f2;
   }
   
   /* Style the links inside the navigation bar */
@@ -34,5 +43,51 @@
     background-color: #ddd;
     color: black;
   }
+
+  .bye{
+    display: none;
+  }
+  
+  #opinion_title {
+    width: 300px;
+    height: 15px;
+  }
+
+  #opinion_url {
+    width: 300px;
+    height: 15px;
+}
+
+ #opinion_content {
+  width: 80%;
+  height: 300px;
+}
+
+#comment_content {
+  width: 80%;
+  height: 300px;
+}
+
+
+.wrapper{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer{
+   text-align: center;
+    margin-top: 800px;;
+    color: #fff;
+    width: 100%;
+    background-color: black;
+    height: 140px;
+    bottom: 0;
+}
+
+footer h3{
+  padding-top: 50px;
+}
+ 
 
   

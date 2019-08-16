@@ -12,28 +12,49 @@
   <% end %>
 
 
-  <% if user_signed_in? %>
-    <%= form.label :name %>
-    <%= form.text_field :name　 %>
-  <% else %>
-    <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<% if user_signed_in? %>
+<p>ユーザー名:<%= current_user.username%></p>
+
+<div class="bye">
+   <div class ="field">
+    <%= form.label :ユーザー名 %>
+    <%= form.text_field :name, value: current_user.username%>
     </div>
-  <% end %>
+    </div>
+
+<% else %>
+
+<p>ユーザー名:Guest</p>
+
+<div class="bye">
+<div class ="field">
+    <%= form.label :ユーザー名 %>
+    <%= form.text_field :name, value: "Guest"%>
+</div>
+</div>
+
+
+
+<% end %>
+ 
+   
   
 
   <div class="field">
-    <%= form.label :comment %>
+    <%= form.label :コメント　%>
     <%= form.text_area :content %>
   </div>
 
+
+  <div class="bye">
   <div class="field">
     <%= form.label :opinion_id %>
     <%= form.text_field :opinion_id %>
   </div>
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "投稿"%>
   </div>
+
 <% end %>

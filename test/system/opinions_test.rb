@@ -19,7 +19,7 @@ class OpinionsTest < ApplicationSystemTestCase
     fill_in "Url", with: @opinion.url
     click_on "Create Opinion"
 
-    assert_text "Opinion was successfully created"
+    assert_text "投稿が保存されました。"
     click_on "Back"
   end
 
@@ -32,7 +32,7 @@ class OpinionsTest < ApplicationSystemTestCase
     fill_in "Url", with: @opinion.url
     click_on "Update Opinion"
 
-    assert_text "Opinion was successfully updated"
+    assert_text "投稿は更新されました。"
     click_on "Back"
   end
 
@@ -42,6 +42,6 @@ class OpinionsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Opinion was successfully destroyed"
+    assert_text "投稿は削除されました。"
   end
 end

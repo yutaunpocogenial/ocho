@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @comment = Comment.new
+    @comment = Commnet.new
   end
 
   # GET /comments/1/edit
@@ -70,6 +70,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:name, :content, :opinion_id)
+      params.require(:comment).permit(:name , :content, :opinion_id)
     end
 end

@@ -6,11 +6,10 @@ Rails.application.routes.draw do
   }
   
   
-    root :to => 'opinions#index'
+    root :to => 'opinions#speed'
 
   
-  get '/opinions' => 'opinions#index'
-  get '/popular' => 'opinions#popular'
+  
   get '/speed' => 'opinions#speed'
   get '/about' => 'opinions#about'
   get '/contact' => 'opinions#contact'
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
 
   resources :opinions
   resources :comments
+  resources :judges
   
 
 

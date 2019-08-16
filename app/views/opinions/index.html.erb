@@ -1,4 +1,5 @@
 
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>  
 
@@ -18,16 +19,16 @@
   </thead>
 
   <tbody>
+
     <% @opinions.each do |opinion| %>
       <tr>
-        <td><%= link_to opinion.title, opinion.url %></td>
-        <td><%= opinion.content %></td>
+        <td><%= link_to opinion.title.truncate(20), opinion.url %></td>
+        <td><%= opinion.content.truncate(45) %></td>
         <td><%= opinion.created_at %></td>
-
+        
+        
         <td><%= link_to 'Show', opinion %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>

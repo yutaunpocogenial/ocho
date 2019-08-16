@@ -3,8 +3,14 @@ class ApplicationController < ActionController::Base
 
 
     def after_sign_in_path_for(opinions)
-        '/opinions'
+        '/speed'
     end
+
+    def after_sign_out_path_for(opinions) 
+      '/speed' 
+    end
+
+
 
   
 
@@ -18,4 +24,4 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
     end
 
-end
+  end
