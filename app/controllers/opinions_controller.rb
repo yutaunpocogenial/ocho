@@ -6,11 +6,101 @@ class OpinionsController < ApplicationController
   end
 
   def speed
+
+
+
+   
+    #@opinions = Opinion.all.order(created_at: :desc)
+    @opinions0 = Opinion.all.select('opinions.*', 'count(comments.id) AS comments')
+                           .left_joins(:comments)
+                           .group('opinions.id')
+                           .order('comments desc')
+                           .limit(5)
+
+
     @opinions = Opinion.all.order(created_at: :desc)
+
+    
+    @comments = Comment.where(opinion_id: @opinion)
+
+
+    
+
+
+    
+
+    
+
+  
+    
+  end
+
+  def sport
+    @opinions = Opinion.where(category: "スポーツ" ).order(created_at: :desc)
+
+    @opinions1 = Opinion.where(category: "スポーツ" ).select('opinions.*', 'count(comments.id) AS comments')
+    .left_joins(:comments)
+    .group('opinions.id')
+    .order('comments desc')
+    .limit(5)
+
+  end
+
+  def tech
+    @opinions = Opinion.where(category: "テクノロジー" ).order(created_at: :desc)
+
+    @opinions2 = Opinion.where(category: "テクノロジー" ).select('opinions.*', 'count(comments.id) AS comments')
+    .left_joins(:comments)
+    .group('opinions.id')
+    .order('comments desc')
+    .limit(5)
+
+  end
+
+  def pol
+    @opinions = Opinion.where(category: "政治" ).order(created_at: :desc)
+
+    @opinions3 = Opinion.where(category: "政治" ).select('opinions.*', 'count(comments.id) AS comments')
+      .left_joins(:comments)
+      .group('opinions.id')
+      .order('comments desc')
+      .limit(5)
+    
+  end
+
+  def enta
+    @opinions = Opinion.where(category: "エンタメ" ).order(created_at: :desc)
+
+    @opinions4 = Opinion.where(category: "エンタメ" ).select('opinions.*', 'count(comments.id) AS comments')
+    .left_joins(:comments)
+    .group('opinions.id')
+    .order('comments desc')
+    .limit(5)
+  end
+
+  def econo
+    @opinions = Opinion.where(category: "経済" ).order(created_at: :desc)
+
+    @opinions5 = Opinion.where(category: "経済" ).select('opinions.*', 'count(comments.id) AS comments')
+      .left_joins(:comments)
+      .group('opinions.id')
+      .order('comments desc')
+      .limit(5)
+  end
+
+  def cul
+    @opinions = Opinion.where(category: "文化" ).order(created_at: :desc)
+
+    @opinions6 = Opinion.where(category: "文化" ).select('opinions.*', 'count(comments.id) AS comments')
+      .left_joins(:comments)
+      .group('opinions.id')
+      .order('comments desc')
+      .limit(5)
   end
 
   def about
   end
+
 
   def contact
   end
@@ -62,6 +152,7 @@ class OpinionsController < ApplicationController
 
   def new
     @opinion = current_user.opinions.build
+    @ip ||= super
   end
 
   def submit
@@ -126,6 +217,6 @@ class OpinionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def opinion_params
-      params.require(:opinion).permit(:title, :url, :content, :user_id)
+      params.require(:opinion).permit(:title, :url, :content, :user_id, :category)
     end
 end

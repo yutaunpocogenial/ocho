@@ -14,80 +14,499 @@
  *= require_self
  */
 
- html,body{
-    margin:0px;
-    word-wrap: break-word;
-    width:100%;
-    
-  }
 
- .topnav {
-    background-color: #333;
-    overflow: hidden;
-    color: #f2f2f2;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
-  .bye{
-    display: none;
-  }
-  
-  #opinion_title {
-    width: 300px;
-    height: 15px;
-  }
 
-  #opinion_url {
-    width: 300px;
-    height: 15px;
+
+
+@media screen and (max-width:639px) {
+  /* general */
+html,body{
+  margin:0px;
+  word-wrap: break-word;
+  width:100%;
 }
 
- #opinion_content {
-  width: 80%;
-  height: 300px;
+.user{
+    width: 70%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 0.1px #000000;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-#comment_content {
-  width: 80%;
-  height: 300px;
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.bye{
+  display: none;
+}
 
-.wrapper{
+.center{
+  text-align: center;
+}
+
+.center1{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-footer{
-   text-align: center;
-    margin-top: 800px;;
-    color: #fff;
-    width: 100%;
-    background-color: black;
-    height: 140px;
-    bottom: 0;
+
+
+/* post-box */
+#opinion_title {
+  width: 300px;
+  height: 15px;
 }
 
-footer h3{
-  padding-top: 50px;
+#opinion_url {
+  width: 300px;
+  height: 15px;
 }
- 
 
+#opinion_content {
+width: 80%;
+height: 300px;
+}
+
+#comment_content {
+width: 80%;
+height: 300px;
+}
+
+
+
+/* navbar */
+.nav-ul  {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+.nav-ul li {
+float: left;
+
+}
+
+.nav-ul li a {
+display: block;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: white;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-ul li a:hover {
+background-color: #111;
+}
+
+
+
+
+
+
+
+
+/* post-card */
+.card {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+background-color: #fff;
+text-align: center;
+}
+
+.card-title{
+font-size: 15px;
+}
+
+.card-title a{
+text-decoration: none;
+}
+
+.card-content{
+text-align: initial;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+
+.card-yoko{
+margin-top: 10px;
+}
+
+.card-time{
+text-align: initial;
+font-size: 10px;
+float: left;
+}
+
+.card-btn{
+display: inline-block;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+  @media only screen and (min-width:640px) and (max-width:1023px) {
+  /* general */
+/* general */
+html,body{
+  margin:0px;
+  word-wrap: break-word;
+  width:100%;
+}
+
+.user{
+    width: 70%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 0.1px #000000;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bye{
+  display: none;
+}
+
+.center{
+  text-align: center;
+}
+
+.center1{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* post-box */
+#opinion_title {
+  width: 300px;
+  height: 15px;
+}
+
+#opinion_url {
+  width: 300px;
+  height: 15px;
+}
+
+#opinion_content {
+width: 80%;
+height: 300px;
+}
+
+#comment_content {
+width: 80%;
+height: 300px;
+}
+
+
+
+/* navbar */
+.nav-ul  {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+.nav-ul li {
+float: left;
+
+}
+
+.nav-ul li a {
+display: block;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: white;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-ul li a:hover {
+background-color: #111;
+}
+
+
+
+
+
+
+.syo{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* post-card */
+.card {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+background-color: #fff;
+text-align: center;
+}
+
+.card-title{
+font-size: 15px;
+}
+
+.card-title a{
+text-decoration: none;
+}
+
+.card-content{
+text-align: initial;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+
+.card-yoko{
+margin-top: 10px;
+}
+
+.card-time{
+text-align: initial;
+font-size: 10px;
+float: left;
+}
+
+.card-btn{
+display: inline-block;
+}
+  }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width:1024px) {
+  /* general */
+/* general */
+html,body{
+  margin:0px;
+  word-wrap: break-word;
+  width:100%;
+}
+
+.user{
+    width: 70%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 0.1px #000000;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bye{
+  display: none;
+}
+
+.center{
+  text-align: center;
+}
+
+.center1{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* post-box */
+#opinion_title {
+  width: 300px;
+  height: 15px;
+}
+
+#opinion_url {
+  width: 300px;
+  height: 15px;
+}
+
+#opinion_content {
+width: 80%;
+height: 300px;
+}
+
+#comment_content {
+width: 80%;
+height: 300px;
+}
+
+
+
+/* navbar */
+.nav-ul  {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+.nav-ul li {
+float: left;
+
+}
+
+.nav-ul li a {
+display: block;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: white;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-ul li a:hover {
+background-color: #111;
+}
+
+
+
+
+
+
+
+.syo{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* post-card */
+.card {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+background-color: #fff;
+text-align: center;
+}
+
+.card-title{
+font-size: 15px;
+}
+
+.card-title a{
+text-decoration: none;
+}
+
+.card-content{
+text-align: initial;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+
+.card-yoko{
+margin-top: 10px;
+}
+
+.card-time{
+text-align: initial;
+font-size: 10px;
+float: left;
+}
+
+.card-btn{
+display: inline-block;
+}
+  }
   
