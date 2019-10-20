@@ -9,42 +9,41 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <meta name="viewport" content="width=device-width" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
   </head>
 
   <body>
+  
 
-  <div class="topnav" id="myTopnav">
-  <a href="/speed">Home</a>
-  <a href="/about">About</a>
-  <a href="/contact">Contact</a>
-  <a href="/submit">Submit</a>
+<ul class="nav-ul" style="list-style: none;">
+      <li ><a href="/speed">ホーム</a></li>
+      <li ><a href="/sport">スポーツ</a></li>
+      <li ><a href="/tech">テクノロジー</a></li>
+      <li ><a href="/enta">エンタメ</a></li>
+      <li  ><a href="/econo">経済</a></li>
+      <li  ><a href="/pol">政治</a></li>
+      <li  ><a href="/cul">文化</a></li>
+   </ul>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+
+  <%= yield %>
 
   
-  <% if user_signed_in? %>
-    <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to 'Login/Signup', new_user_session_path, :method => :get %>
-  <% end %>
+  
+
+  
 
 
-  <% if user_signed_in? %>
-    <%= link_to  current_user.username, '/mypage' %>
-  <% else %>
-     <a>Guest</a>
-  <% end %>
 
-  </div>
+    
 
-  <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
 
-<div class="wrapper">
-    <%= yield %>
-</div>
-
-<footer>
- <h3>Ocho</h3>
-</footer>
+  
 
   </body>
 </html>
