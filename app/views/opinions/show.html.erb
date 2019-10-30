@@ -10,18 +10,17 @@
 <p>
   <strong>URL:</strong>
   <%= link_to @opinion.url, @opinion.url  %>
-  
 </p>
 
 
 <br>
 
+<div class="kaigyo">
 <p>
 <strong>意見</strong>
-<span style="margon:0px;">
   <%= simple_format @opinion.content %>
- </span>
 </p>
+</div>
 
 
 <br>
@@ -34,7 +33,9 @@
       <tr>
         <td><%= 1 + index %>.</td>
         <td><b><%=  comment.name %></b></td> 
+        <div class="kaigyo">
         <td><%= simple_format comment.content %></td>
+        </div>
         <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M")%></td>
         
       </tr>
