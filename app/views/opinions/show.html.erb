@@ -1,18 +1,26 @@
 
-
+<br>
 <p>
   <strong>タイトル:</strong>
   <%= @opinion.title %>
 </p>
 
+<br>
+
 <p>
   <strong>URL:</strong>
   <%= link_to @opinion.url, @opinion.url  %>
+  
 </p>
 
+
+<br>
+
 <p>
-  <strong>意見</strong>
+<strong>意見</strong>
+<span style="margon:0px;">
   <%= simple_format @opinion.content %>
+ </span>
 </p>
 
 
@@ -25,17 +33,12 @@
 <% @comments.each_with_index do |comment,index| %>
       <tr>
         <td><%= 1 + index %>.</td>
-
-        <td><%=  comment.name %></td> 
-        
-        
-        <br>
+        <td><b><%=  comment.name %></b></td> 
         <td><%= simple_format comment.content %></td>
-  
-        <br>
-        <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M")  %></td>
+        <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M")%></td>
         
       </tr>
+      <br>
       <br>
       <br>
 <% end %>
