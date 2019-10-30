@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>意見:</strong>
-  <%= @opinion.content %>
+  <strong>意見</strong>
+  <%= simple_format @opinion.content %>
 </p>
 
 
@@ -30,7 +30,7 @@
         
         
         <br>
-        <td><%= comment.content %></td>
+        <td><%= simple_format comment.content %></td>
   
         <br>
         <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M")  %></td>
