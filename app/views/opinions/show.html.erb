@@ -26,10 +26,13 @@
 <br>
 
 <h3>いいね件数: <%= @opinion.likes.count %></h3>
-<% if current_user.already_liked?(@opinion) %>
-  <%= button_to 'いいねを取り消す', opinion_like_path(@opinion), method: :delete %>
+<% if user_signed_in? %>
+  <% if current_user.already_liked?(@opinion) %>
+   <%= button_to 'いいねを取り消す', opinion_like_path(@opinion), method: :delete %>
+  <% else %>
+   <%= button_to 'いいね', opinion_likes_path(@opinion) %>
+  <% end %>
 <% else %>
-  <%= button_to 'いいね', opinion_likes_path(@opinion) %>
 <% end %>
 <h2>いいねしたユーザー</h2>
 <% @opinion.liked_users.each do |user| %>
