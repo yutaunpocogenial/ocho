@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  has_many:opinions, dependent: :destroy
+  
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,8 +9,12 @@ class User < ApplicationRecord
 
   validates :username, :uniqueness => true, :presence => true
 
-    
+  has_many:opinions, dependent: :destroy
+  has_many:likes, dependent: :destroy
+  has_many:liked_opinions, through: :likes, source: :opinion
        
-      
+  def already_liked?(opinion)
+    self.likes.exists?(opinion_id: opinion.id)
+  end  
   
 end

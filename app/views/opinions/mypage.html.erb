@@ -34,3 +34,27 @@
 　 
 
  <% end %>
+
+ <h3>いいねしている投稿</h3>
+<% @opinions.each_with_index do |opinion,index| %>
+      <tr>
+        <td><%=1 +index %>.</td>
+
+        <td><%= link_to opinion.title.truncate(20), opinion.url  %></td> 
+      
+        <br>
+        <td><%= opinion.content.truncate(45) %></td>
+  
+        <br>
+        <td><%= opinion.created_at.strftime("%Y-%m-%d %H:%M")  %></td>
+
+        <br>
+        <td><%= link_to 'コメント', opinion %></td>
+
+        <br>
+         <td><%= link_to '削除', opinion, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+      </tr>
+      <br>
+      <br>
+
+　<% end %>

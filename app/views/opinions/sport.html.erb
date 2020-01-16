@@ -124,7 +124,7 @@
 
 <a herf= <%=opinion.url %> >
 <div class="card-title">
-      <%= link_to opinion.title.truncate(20), opinion.url  %>
+      <%= link_to opinion.title.truncate(20), opinion.url  %> <%= opinion.liked_users.count %>
 </div>
 </a>
       
@@ -203,7 +203,7 @@
 
 <a herf= <%=opinion.url %> >
 <div class="card-title">
-      <%= link_to opinion.title.truncate(20), opinion.url  %>
+      <%= link_to opinion.title.truncate(20), opinion.url  %> <%= opinion.liked_users.count %>
 </div>
 </a>
       

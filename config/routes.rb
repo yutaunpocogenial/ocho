@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   
+  
+
   devise_for :users, controllers: {
         sessions: 'users/sessions'
   }
@@ -22,9 +24,14 @@ Rails.application.routes.draw do
   get '/submit' => 'opinions#submit'
   get '/mypage' => 'opinions#mypage'
   get '/opinions' => 'opinions#speed'
+  get '/search' => 'opinions#search'
 
 
-  resources :opinions
+  resources :users, only: [:index, :show]
+  resources :opinions do
+   resources :likes, only: [:create, :destroy]
+ end
+
   resources :comments
   resources :judges
   

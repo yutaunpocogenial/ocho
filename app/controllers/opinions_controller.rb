@@ -6,9 +6,6 @@ class OpinionsController < ApplicationController
   end
 
   def speed
-
-
-
    
     #@opinions = Opinion.all.order(created_at: :desc)
     @opinions0 = Opinion.all.select('opinions.*', 'count(comments.id) AS comments')
@@ -21,18 +18,13 @@ class OpinionsController < ApplicationController
     @opinions = Opinion.all.order(created_at: :desc)
 
     
+    
     @comments = Comment.where(opinion_id: @opinion)
 
+  end
 
-    
-
-
-    
-
-    
-
-  
-    
+  def search
+    @opinions = Opinion.search(params[:search])
   end
 
   def sport
@@ -139,6 +131,8 @@ class OpinionsController < ApplicationController
     
 
     @users = User.where()
+
+    @like = Like.new
   end
 
   # GET /opinions/new
@@ -219,4 +213,5 @@ class OpinionsController < ApplicationController
     def opinion_params
       params.require(:opinion).permit(:title, :url, :content, :user_id, :category)
     end
-end
+
+  end

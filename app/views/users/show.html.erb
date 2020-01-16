@@ -1,0 +1,16 @@
+<h1>ユーザー詳細ページ</h1>
+<h3><%= @user.username %></h3>
+<h2>投稿内容</h2>
+<% @user.opinions.each do |opinion| %>
+  <a href="/opinions/<%= opinion.id %>"><%= opinion.title %></a>
+  <hr>
+<% end %>
+
+
+<h3>いいねしている投稿</h3>
+<% @user.liked_opinions.each do |opinion| %>
+  <%= opinion.content %>
+<% end %>
+
+<%= link_to "ユーザー一覧へ", users_path %>
+<%= link_to "ホームへ戻る", opinions_path %>
