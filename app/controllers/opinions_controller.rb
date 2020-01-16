@@ -21,6 +21,8 @@ class OpinionsController < ApplicationController
     
     @comments = Comment.where(opinion_id: @opinion)
 
+   
+
   end
 
   def search

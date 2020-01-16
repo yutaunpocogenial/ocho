@@ -18,7 +18,7 @@
 
 <ul style="list-style: none;">
       <li ><% if user_signed_in? %>
-    <span class="button"><%= link_to  current_user.username, '/mypage' %></span>
+    <span class="button"><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></span>
   <% else %>
      <a>Guest</a>
   <% end %></li>

@@ -9,7 +9,7 @@
 
 <h3>いいねしている投稿</h3>
 <% @user.liked_opinions.each do |opinion| %>
-  <%= opinion.content %>
+  <%= opinion.title %>
 <% end %>
 
 <%= link_to "ユーザー一覧へ", users_path %>
