@@ -7,101 +7,6 @@
 
 
 
-<div class="parent">
-
-<div class="child">
-
-
-
-
-
-<div class="user">
-
-
-
-
-
-<ul style="list-style: none;">
-      <li ><% if user_signed_in? %>
-    <span class="button"><%= link_to  current_user.username, '/mypage' %></span>
-  <% else %>
-     <a>Guest</a>
-  <% end %></li>
-
-  <% if user_signed_in? %>
-    <br>
-  <% else %>
-    
-  <% end %>
-
-
-      <li><% if user_signed_in? %>
-  <a class="button" href="/submit">シェア</a>
-   <% else %>
-  <% end %></li>
-
-  <% if user_signed_in? %>
-    <br>
-  <% else %>
-    
-  <% end %>
-
-  <% if user_signed_in? %>
-    <br>
-  <% else %>
-    
-  <% end %>
-
-
-  <li ><% if user_signed_in? %>
-    <span class="button"><%= link_to 'ログアウト', destroy_user_session_path, :method => :delete %></span>
-  <% else %>
-    <span class="button"><%= link_to 'ログイン/アカウント登録', new_user_session_path, :method => :get %></span>
-  <% end %></li>
-
-  <li ><% if user_signed_in? %>
-    <span class="button"><%= link_to 'アカウント削除', user_registration_path, :method => :delete %></span>
-  <% else %>
-    
-  <% end %></li>
-  </ul>
-
-  <% if user_signed_in? %>
-    <br>
-  <% else %>
-    
-  <% end %>
-
-  <% if user_signed_in? %>
-    <br>
-  <% else %>
-    
-  <% end %>
-
-  
-
-
-  <div class="setumei">
-      <ul style="list-style: none;">
-      <li ><a href="/about">このサイトについて</a></li>
-      <li ><a href="/contact">連絡先</a></li>
-      </ul>
-  </div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
 <br>
@@ -122,6 +27,8 @@
 <div class="syo">
 
 <h1>ランキング-TOP5</h1>
+
+<div class="box1">
 
 <% @opinions2.each_with_index do |opinion,index| %>
       
@@ -157,6 +64,7 @@
      
 <% end %>
 
+</div>
 </div>
 
 
@@ -201,6 +109,7 @@
 
 
 <h1>新着</h1>
+<div class="box1">
 <% @opinions.each_with_index do |opinion,index| %>
       
         
@@ -235,15 +144,13 @@
      
 <% end %>
 
-</div>
-</div>
 
 
 
 
 
 </div>
-    
+</div>
 
 
 

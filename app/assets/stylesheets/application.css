@@ -22,6 +22,37 @@
   margin-inline-end: 0px;
 }
 
+.pochitto_btn_blue {
+	display: inline-block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background:rgb(4, 133, 255);
+	border-bottom:4px solid #005691;
+	border-radius: 4px;
+	transition: .0s;
+}
+.pochitto_btn_blue:hover {
+	 cursor: pointer;
+	 text-decoration: none;
+	 background:#005691;
+	 transform: translate3d(0, 4px, 0);
+	 transition: .0s;
+	 border-bottom: none;
+}
+.pochitto_btn_blue:visited {
+  color: white;
+}
+.box1 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 1px #000000;
+}
+
+
 
 
 @media screen and (max-width:639px) {
@@ -33,17 +64,17 @@ html,body{
 }
 
 .user{
-    width: 70%;
+    width: 60%;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
-    border: solid 0.1px #000000;
+    border: solid 1px #000000;
     margin-right: auto;
     margin-left: auto;
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: rgb(4, 133, 255);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -57,6 +88,9 @@ html,body{
   margin-left: auto;
   margin-right: auto;
 }
+.button:visited {
+  color: white;
+}
 
 .bye{
   display: none;
@@ -67,7 +101,7 @@ html,body{
 }
 
 .center1{
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -103,7 +137,7 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #333;
+background-color: rgb(4, 133, 255);
 
 }
 
@@ -197,17 +231,17 @@ html,body{
 }
 
 .user{
-    width: 70%;
+    width: 60%;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
-    border: solid 0.1px #000000;
+    border: solid 1px #000000;
     margin-right: auto;
     margin-left: auto;
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: rgb(4, 133, 255);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -221,6 +255,9 @@ html,body{
   margin-left: auto;
   margin-right: auto;
 }
+.button:visited {
+  color: white;
+}
 
 .bye{
   display: none;
@@ -231,7 +268,7 @@ html,body{
 }
 
 .center1{
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -267,7 +304,7 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #333;
+background-color: rgb(4, 133, 255);
 
 }
 
@@ -370,17 +407,17 @@ html,body{
 }
 
 .user{
-    width: 70%;
+    width: 60%;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
-    border: solid 0.1px #000000;
+    border: solid 1px #000000;
     margin-right: auto;
     margin-left: auto;
 }
 
 .button {
-  background-color: #4CAF50;
+  background-color: rgb(4, 133, 255);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -394,6 +431,9 @@ html,body{
   margin-left: auto;
   margin-right: auto;
 }
+.button:visited {
+  color: white;
+}
 
 .bye{
   display: none;
@@ -404,7 +444,7 @@ html,body{
 }
 
 .center1{
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -440,8 +480,8 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #333;
-
+background-color: rgb(4, 133, 255);
+font-size: 20px;
 }
 
 .nav-ul li {

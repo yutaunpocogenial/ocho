@@ -1,6 +1,19 @@
+<br>
+<hr>
+<br>
+
+<div class="syo">
 <h1>ユーザー一覧</h1>
+<div class="box1">
 <% @users.each do |user| %>
   <a href="/users/<%= user.id %>"><%= user.username %></a>
-  <hr>
+
 <% end %>
-<%= link_to "ホームへ戻る", opinions_path %>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<div class="syo">
+<%= link_to "ホームへ戻る", opinions_path, {class: "pochitto_btn_blue"}%>
+</div>

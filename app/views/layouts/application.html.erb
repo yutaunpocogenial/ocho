@@ -33,6 +33,89 @@
 
 
 
+<div class="syo">
+<div class="box1">
+
+<ul style="list-style: none;">
+      <li ><% if user_signed_in? %>
+   <a class="button" href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+  <% else %>
+     <a>Guest</a>
+  <% end %></li>
+
+  <% if user_signed_in? %>
+    <br>
+  <% else %>
+    
+  <% end %>
+
+
+      <li><% if user_signed_in? %>
+  <a class="button" href="/submit">シェア</a>
+   <% else %>
+  <% end %></li>
+
+  <% if user_signed_in? %>
+    <br>
+  <% else %>
+    
+  <% end %>
+
+  <% if user_signed_in? %>
+    <br>
+  <% else %>
+    
+  <% end %>
+
+
+  <li ><% if user_signed_in? %>
+    <%= link_to 'ログアウト', destroy_user_session_path, {:method => :delete, class:"button"} %>
+  <% else %>
+    <%= link_to 'ログイン/アカウント登録', new_user_session_path, {:method => :get, class:"button"} %>
+  <% end %></li>
+
+  <li ><% if user_signed_in? %>
+    <%= link_to 'アカウント削除', user_registration_path, {:method => :delete, class:"button"} %>
+  <% else %>
+    
+  <% end %></li>
+  </ul>
+
+  <% if user_signed_in? %>
+    <br>
+  <% else %>
+    
+  <% end %>
+
+  <% if user_signed_in? %>
+    <br>
+  <% else %>
+    
+  <% end %>
+
+  
+
+
+  <div class="setumei">
+      <ul style="list-style: none;">
+      <li ><a href="/about">このサイトについて</a></li>
+      <li ><a href="/contact">連絡先</a></li>
+      </ul>
+  </div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
   <%= yield %>
 
   

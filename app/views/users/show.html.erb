@@ -1,4 +1,10 @@
+<br>
+<br>
+
+<div class="syo">
 <h1>ユーザー詳細ページ</h1>
+
+<div class="box1">
 <h3><%= @user.username %></h3>
 <h2>投稿内容</h2>
 <% @user.opinions.each do |opinion| %>
@@ -9,8 +15,16 @@
 
 <h3>いいねしている投稿</h3>
 <% @user.liked_opinions.each do |opinion| %>
-  <%= opinion.title %>
+  <a href="/opinions/<%= opinion.id %>"><%= opinion.title %></a>
 <% end %>
+<br>
+<br>
+<%= link_to "ユーザー一覧へ", users_path, {class:"pochitto_btn_blue"}%>
+<%= link_to "ホームへ戻る", opinions_path, {class:"pochitto_btn_blue"}%>
+</div>
+</div>
 
-<%= link_to "ユーザー一覧へ", users_path %>
-<%= link_to "ホームへ戻る", opinions_path %>
+<br>
+<br>
+<br>
+<br>
